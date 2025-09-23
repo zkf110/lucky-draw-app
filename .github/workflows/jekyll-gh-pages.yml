@@ -32,6 +32,8 @@ jobs:
 
       - name: Build (CRA outputs to build/)
         run: npm run build
+        env:
+          CI: false        # 不要把 warning 当 error
 
       - name: SPA 404 fallback
         run: cp build/index.html build/404.html
