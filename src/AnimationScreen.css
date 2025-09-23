@@ -1,0 +1,54 @@
+.animation-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color: white;
+  font-size: 3em;
+  flex-direction: column;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animation-content {
+  text-align: center;
+}
+
+.drawing-text {
+  font-size: 0.8em;
+  margin-bottom: 20px;
+  color: #ffd700; /* Gold color */
+}
+
+.number-display {
+  font-size: 4em;
+  font-weight: bold;
+  color: #00bfff; /* Deep Sky Blue */
+  border: 5px solid #ffd700;
+  border-radius: 20px;
+  padding: 30px 60px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.7);
+  animation: pulse 1.5s infinite alternate;
+}
+
+.countdown-text {
+  font-size: 0.6em;
+  margin-top: 20px;
+  color: #a9a9a9; /* Dark Gray */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  from { transform: scale(1); box-shadow: 0 0 30px rgba(0, 191, 255, 0.7); }
+  to { transform: scale(1.05); box-shadow: 0 0 50px rgba(0, 191, 255, 1); }
+}
