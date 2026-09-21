@@ -9,7 +9,6 @@ function App() {
   const [firstPrizeWinners, setFirstPrizeWinners] = useState([]);
   const [isDrawing, setIsDrawing] = useState(false);
   const [currentWinningNumber, setCurrentWinningNumber] = useState(null);
-  const [drawType, setDrawType] = useState(null); // 'third' | 'second' | 'first'
 
   useEffect(() => {
     // Initialize numbers from 1 to 200
@@ -26,7 +25,6 @@ function App() {
     if (isDrawing) return;
 
     setIsDrawing(true);
-    setDrawType(prizeType);
     setCurrentWinningNumber(null); // Clear previous winning number
 
     // 5-second animation
@@ -70,7 +68,6 @@ function App() {
 
     setAllNumbers(availableForDraw); // Update the global pool of numbers
     setIsDrawing(false);
-    setDrawType(null);
     setCurrentWinningNumber(null); // Clear after draw
   };
 
